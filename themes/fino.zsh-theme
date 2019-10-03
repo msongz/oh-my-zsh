@@ -20,6 +20,7 @@ function box_name {
     [ -f ~/.box-name ] && cat ~/.box-name || echo ${SHORT_HOST:-$HOST}
 }
 
+<<<<<<< HEAD
 local ruby_env=''
 if which rvm-prompt &> /dev/null; then
   ruby_env='using%{$FG[243]%} ‹$(rvm-prompt i v g)›%{$reset_color%}'
@@ -29,6 +30,9 @@ else
   fi
 fi
 
+=======
+local ruby_env='using%{$FG[243]%} $(ruby_prompt_info)'
+>>>>>>> 3848102a5ec8534cef935d594c6abcbfc0f419c8
 local git_info='$(git_prompt_info)'
 local prompt_char='$(prompt_char)'
 
@@ -40,3 +44,5 @@ ZSH_THEME_GIT_PROMPT_PREFIX=" %{$FG[239]%}on%{$reset_color%} %{$fg[255]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_DIRTY="%{$FG[202]%}✘✘✘"
 ZSH_THEME_GIT_PROMPT_CLEAN="%{$FG[040]%}✔"
+ZSH_THEME_RUBY_PROMPT_PREFIX="‹"
+ZSH_THEME_RUBY_PROMPT_SUFFIX="›%{$reset_color%}"

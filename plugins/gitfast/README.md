@@ -10,6 +10,7 @@ plugins=(... gitfast)
 
 ## Aliases
 
+<<<<<<< HEAD
 | Alias                | Command                                                                                                                                |
 | -------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
 | g                    | `git`                                                                                                                                  |
@@ -136,3 +137,8 @@ plugins=(... gitfast)
 | gupv                 | `git pull --rebase -v`                                                                                                                 |
 | gwch                 | `git whatchanged -p --abbrev-commit --pretty=medium`                                                                                   |
 | gwip                 | `git add -A; git rm $(git ls-files --deleted) 2> /dev/null; git commit --no-verify -m "--wip-- [skip ci]"`                             |
+=======
+An earlier version of the plugin also loaded the git plugin. If you want to keep those
+aliases enable the [git plugin](https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/git)
+as well.
+>>>>>>> 3848102a5ec8534cef935d594c6abcbfc0f419c8

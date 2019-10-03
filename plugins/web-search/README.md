@@ -37,6 +37,11 @@ Available search contexts are:
 | `ecosia`              | `https://www.ecosia.org/search?q=`       |
 | `goodreads`           | `https://www.goodreads.com/search?q=`    |
 | `qwant`               | `https://www.qwant.com/?q=`              |
+<<<<<<< HEAD
+=======
+| `givero`              | `https://www.givero.com/search?q=`       |
+| `stackoverflow`       | `https://stackoverflow.com/search?q=`    |
+>>>>>>> 3848102a5ec8534cef935d594c6abcbfc0f419c8
 
 Also there are aliases for bang-searching DuckDuckGo:
 

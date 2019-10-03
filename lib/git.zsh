@@ -10,13 +10,10 @@ function git_prompt_info() {
 
 # Checks if working tree is dirty
 function parse_git_dirty() {
-  local STATUS=''
+  local STATUS
   local -a FLAGS
-  FLAGS=('--porcelain')
+  FLAGS=('--porcelain' '--ignore-submodules=dirty')
   if [[ "$(command git config --get oh-my-zsh.hide-dirty)" != "1" ]]; then
-    if [[ $POST_1_7_2_GIT -gt 0 ]]; then
-      FLAGS+='--ignore-submodules=dirty'
-    fi
     if [[ "$DISABLE_UNTRACKED_FILES_DIRTY" == "true" ]]; then
       FLAGS+='--untracked-files=no'
     fi
@@ -181,6 +178,7 @@ function git_prompt_status() {
   echo $STATUS
 }
 
+<<<<<<< HEAD
 # Compares the provided version of git to the version installed and on path
 # Outputs -1, 0, or 1 if the installed version is less than, equal to, or
 # greater than the input version, respectively.
@@ -203,6 +201,8 @@ function git_compare_version() {
   echo 0
 }
 
+=======
+>>>>>>> 3848102a5ec8534cef935d594c6abcbfc0f419c8
 # Outputs the name of the current user
 # Usage example: $(git_current_user_name)
 function git_current_user_name() {
@@ -214,8 +214,3 @@ function git_current_user_name() {
 function git_current_user_email() {
   command git config user.email 2>/dev/null
 }
-
-# This is unlikely to change so make it all statically assigned
-POST_1_7_2_GIT=$(git_compare_version "1.7.2")
-# Clean up the namespace slightly by removing the checker function
-unfunction git_compare_version

@@ -14,7 +14,11 @@
 | yalocs  | yay -Qs                            | Search for packages in the local database                           |
 | yalst   | yay -Qe                            | List installed packages including from AUR (tagged as "local")      |
 | yamir   | yay -Syy                           | Force refresh of all package lists after updating mirrorlist        |
+<<<<<<< HEAD
 | yaorph  | yay -Qtd                           | Remove orphans using yaourt                                         |
+=======
+| yaorph  | yay -Qtd                           | Remove orphans using yay                                            |
+>>>>>>> 3848102a5ec8534cef935d594c6abcbfc0f419c8
 | yare    | yay -R                             | Remove packages, keeping its settings and dependencies              |
 | yarem   | yay -Rns                           | Remove packages, including its settings and unneeded dependencies   |
 | yarep   | yay -Si                            | Display information about a package in the repositories             |

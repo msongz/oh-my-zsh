@@ -27,5 +27,9 @@ It works out of the box with the command-not-found packages for:
 - [Arch Linux](https://wiki.archlinux.org/index.php/Pkgfile#Command_not_found)
 - [macOS (Homebrew)](https://github.com/Homebrew/homebrew-command-not-found)
 - [Fedora](https://fedoraproject.org/wiki/Features/PackageKitCommandNotFound)
+<<<<<<< HEAD
+=======
+- [NixOS](https://github.com/NixOS/nixpkgs/tree/master/nixos/modules/programs/command-not-found)
+>>>>>>> 3848102a5ec8534cef935d594c6abcbfc0f419c8
 
 You can add support for other platforms by submitting a Pull Request.

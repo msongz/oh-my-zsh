@@ -25,11 +25,15 @@ function box_name {
 }
 
 
+<<<<<<< HEAD
 rvm_ruby=''
 if type rvm-prompt &>/dev/null; then
     rvm_ruby='using%{$FG[243]%}‹$(rvm-prompt i v g)›%{$reset_color%}'
 fi
 
+=======
+local rvm_ruby='using%{$FG[243]%}$(ruby_prompt_info)'
+>>>>>>> 3848102a5ec8534cef935d594c6abcbfc0f419c8
 local git_info='$(git_prompt_info)'
 
 
@@ -40,3 +44,5 @@ ZSH_THEME_GIT_PROMPT_PREFIX=" %{$FG[239]%}on%{$reset_color%} %{$fg[255]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_DIRTY="%{$FG[202]%}✘✘✘"
 ZSH_THEME_GIT_PROMPT_CLEAN="%{$FG[040]%}✔"
+ZSH_THEME_RUBY_PROMPT_PREFIX="‹"
+ZSH_THEME_RUBY_PROMPT_SUFFIX="›%{$reset_color%}"

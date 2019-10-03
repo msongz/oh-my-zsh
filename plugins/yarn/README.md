@@ -19,6 +19,10 @@ plugins=(... yarn)
 | yap   | `yarn add --peer`                         | Install a package in peerDependencies (`package.json`)      |
 | yb    | `yarn build`                              | Run the build script defined in `package.json`              |
 | ycc   | `yarn cache clean`                        | Clean yarn's global cache of packages                       |
+<<<<<<< HEAD
+=======
+| yd    | `yarn dev`                                | Run the dev script defined in `package.json`                |
+>>>>>>> 3848102a5ec8534cef935d594c6abcbfc0f419c8
 | yga   | `yarn global add`                         | Install packages globally on your operating system          |
 | ygls  | `yarn global list`                        | Lists global installed packages                             |
 | ygrm  | `yarn global remove`                      | Remove global installed packages from your OS               |
@@ -37,3 +41,8 @@ plugins=(... yarn)
 | yuc   | `yarn global upgrade && yarn cache clean` | Upgrade global packages and clean yarn's global cache       |
 | yui   | `yarn upgrade-interactive`                | Prompt for which outdated packages to upgrade               |
 | yup   | `yarn upgrade`                            | Upgrade packages to their latest version                    |
+<<<<<<< HEAD
+=======
+| yw    | `yarn workspace`                          | Run a command within a single workspace.                    |
+| yws   | `yarn workspaces`                         | Run a command within all defined workspaces.                |
+>>>>>>> 3848102a5ec8534cef935d594c6abcbfc0f419c8

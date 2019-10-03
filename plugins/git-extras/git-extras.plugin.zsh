@@ -454,9 +454,15 @@ zstyle ':completion:*:*:git:*' user-commands $existing_user_commands \
     extras:'awesome git utilities' \
     feature:'create/merge feature branch' \
     force-clone:'overwrite local repositories with clone' \
+<<<<<<< HEAD
     fork:'fork a repo on github' \
     fresh-branch:'create fresh branches' \
     gh-pages:'create the github pages branch' \
+=======
+    fork:'fork a repo on GitHub' \
+    fresh-branch:'create fresh branches' \
+    gh-pages:'create the GitHub pages branch' \
+>>>>>>> 3848102a5ec8534cef935d594c6abcbfc0f419c8
     graft:'merge and destroy a given branch' \
     guilt:'calculate change between two revisions' \
     ignore-io:'get sample gitignore file' \

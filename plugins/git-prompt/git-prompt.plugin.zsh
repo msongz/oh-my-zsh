@@ -1,6 +1,9 @@
+<<<<<<< HEAD
 # ZSH Git Prompt Plugin from:
 # https://github.com/olivierverdier/zsh-git-prompt
 
+=======
+>>>>>>> 3848102a5ec8534cef935d594c6abcbfc0f419c8
 __GIT_PROMPT_DIR="${0:A:h}"
 
 ## Hook function definitions

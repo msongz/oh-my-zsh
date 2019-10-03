@@ -39,6 +39,14 @@ KUBE_PS1_DIVIDER="${KUBE_PS1_DIVIDER-:}"
 KUBE_PS1_PREFIX="${KUBE_PS1_PREFIX-(}"
 KUBE_PS1_SUFFIX="${KUBE_PS1_SUFFIX-)}"
 KUBE_PS1_LAST_TIME=0
+<<<<<<< HEAD
+=======
+KUBE_PS1_ENABLED=true
+
+KUBE_PS1_COLOR_SYMBOL="%{$fg[blue]%}"
+KUBE_PS1_COLOR_CONTEXT="%{$fg[red]%}"
+KUBE_PS1_COLOR_NS="%{$fg[cyan]%}"
+>>>>>>> 3848102a5ec8534cef935d594c6abcbfc0f419c8
 
 _kube_ps1_binary_check() {
   command -v "$1" >/dev/null
@@ -127,6 +135,7 @@ _kube_ps1_get_context_ns() {
   fi
 }
 
+<<<<<<< HEAD
 # Build our prompt
 kube_ps1 () {
   local reset_color="%f"
@@ -144,4 +153,30 @@ kube_ps1 () {
 
   echo "${KUBE_PS1}"
 
+=======
+# function to disable the prompt on the current shell
+kubeon(){
+  KUBE_PS1_ENABLED=true
+}
+
+# function to disable the prompt on the current shell
+kubeoff(){
+  KUBE_PS1_ENABLED=false
+}
+
+# Build our prompt
+kube_ps1 () {
+  local reset_color="%{$reset_color%}"
+  [[ ${KUBE_PS1_ENABLED} != 'true' ]] && return
+
+  KUBE_PS1="${reset_color}$KUBE_PS1_PREFIX"
+  KUBE_PS1+="${KUBE_PS1_COLOR_SYMBOL}$(_kube_ps1_symbol)"
+  KUBE_PS1+="${reset_color}$KUBE_PS1_SEPERATOR"
+  KUBE_PS1+="${KUBE_PS1_COLOR_CONTEXT}$KUBE_PS1_CONTEXT${reset_color}"
+  KUBE_PS1+="$KUBE_PS1_DIVIDER"
+  KUBE_PS1+="${KUBE_PS1_COLOR_NS}$KUBE_PS1_NAMESPACE${reset_color}"
+  KUBE_PS1+="$KUBE_PS1_SUFFIX"
+
+  echo "${KUBE_PS1}"
+>>>>>>> 3848102a5ec8534cef935d594c6abcbfc0f419c8
 }

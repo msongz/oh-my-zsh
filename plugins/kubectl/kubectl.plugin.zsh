@@ -13,6 +13,9 @@ fi
 # This command is used a LOT both below and in daily life
 alias k=kubectl
 
+# Execute a kubectl command against all namespaces
+alias kca='f(){ kubectl "$@" --all-namespaces;  unset -f f; }; f'
+
 # Apply a YML file
 alias kaf='kubectl apply -f'
 
@@ -25,6 +28,12 @@ alias kcsc='kubectl config set-context'
 alias kcdc='kubectl config delete-context'
 alias kccc='kubectl config current-context'
 
+<<<<<<< HEAD
+=======
+# List all contexts
+alias kcgc='kubectl config get-contexts'
+
+>>>>>>> 3848102a5ec8534cef935d594c6abcbfc0f419c8
 # General aliases
 alias kdel='kubectl delete'
 alias kdelf='kubectl delete -f'
@@ -59,6 +68,10 @@ alias kgns='kubectl get namespaces'
 alias kens='kubectl edit namespace'
 alias kdns='kubectl describe namespace'
 alias kdelns='kubectl delete namespace'
+<<<<<<< HEAD
+=======
+alias kcn='kubectl config set-context $(kubectl config current-context) --namespace'
+>>>>>>> 3848102a5ec8534cef935d594c6abcbfc0f419c8
 
 # ConfigMap management
 alias kgcm='kubectl get configmaps'
@@ -80,12 +93,31 @@ alias kdd='kubectl describe deployment'
 alias kdeld='kubectl delete deployment'
 alias ksd='kubectl scale deployment'
 alias krsd='kubectl rollout status deployment'
+<<<<<<< HEAD
+=======
+kres(){
+    kubectl set env $@ REFRESHED_AT=$(date +%Y%m%d%H%M%S)
+}
+>>>>>>> 3848102a5ec8534cef935d594c6abcbfc0f419c8
 
 # Rollout management.
 alias kgrs='kubectl get rs'
 alias krh='kubectl rollout history'
 alias kru='kubectl rollout undo'
 
+<<<<<<< HEAD
+=======
+# Statefulset management.
+alias kgss='kubectl get statefulset'
+alias kgssw='kgss --watch'
+alias kgsswide='kgss -o wide'
+alias kess='kubectl edit statefulset'
+alias kdss='kubectl describe statefulset'
+alias kdelss='kubectl delete statefulset'
+alias ksss='kubectl scale statefulset'
+alias krsss='kubectl rollout status statefulset'
+
+>>>>>>> 3848102a5ec8534cef935d594c6abcbfc0f419c8
 # Port forwarding
 alias kpf="kubectl port-forward"
 
@@ -105,3 +137,14 @@ alias kgno='kubectl get nodes'
 alias keno='kubectl edit node'
 alias kdno='kubectl describe node'
 alias kdelno='kubectl delete node'
+<<<<<<< HEAD
+=======
+
+# PVC management.
+alias kgpvc='kubectl get pvc'
+alias kgpvcw='kgpvc --watch'
+alias kepvc='kubectl edit pvc'
+alias kdpvc='kubectl describe pvc'
+alias kdelpvc='kubectl delete pvc'
+
+>>>>>>> 3848102a5ec8534cef935d594c6abcbfc0f419c8

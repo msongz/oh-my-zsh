@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 jenvdirs=("$HOME/.jenv" "/usr/local/jenv" "/opt/jenv")
+=======
+jenvdirs=("$HOME/.jenv" "/usr/local" "/usr/local/jenv" "/opt/jenv")
+>>>>>>> 3848102a5ec8534cef935d594c6abcbfc0f419c8
 
 FOUND_JENV=0
 for jenvdir in $jenvdirs; do

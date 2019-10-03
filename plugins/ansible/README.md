@@ -19,9 +19,14 @@ plugins=(... ansible)
 | `a`                                        | command `ansible`                                                   |
 | `aconf`                                    | command `ansible-config`                                            |
 | `acon`                                     | command `ansible-console`                                           |
+<<<<<<< HEAD
 | `aconn`                                    | command `ansible-connection`                                        |
 | `ainv`                                     | command `ansible-inventory`                                         |
 | `aplay`                                    | command `ansible-playbook`                                          |
+=======
+| `ainv`                                     | command `ansible-inventory`                                         |
+| `aplaybook`                                | command `ansible-playbook`                                          |
+>>>>>>> 3848102a5ec8534cef935d594c6abcbfc0f419c8
 | `ainv`                                     | command `ansible-inventory`                                         |
 | `adoc`                                     | command `ansible-doc`                                               |
 | `agal`                                     | command `ansible-galaxy`                                            |

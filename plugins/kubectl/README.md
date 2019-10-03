@@ -14,6 +14,10 @@ plugins=(... kubectl)
 | Alias   | Command                             | Description                                                                                      |
 |:--------|:------------------------------------|:-------------------------------------------------------------------------------------------------|
 | k       | `kubectl`                           | The kubectl command                                                                              |
+<<<<<<< HEAD
+=======
+| kca     | `kubectl --all-namespaces`          | The kubectl command targeting all namespaces                                                     |
+>>>>>>> 3848102a5ec8534cef935d594c6abcbfc0f419c8
 | kaf     | `kubectl apply -f`                  | Apply a YML file                                                                                 |
 | keti    | `kubectl exec -ti`                  | Drop into an interactive terminal on a container                                                 |
 |         |                                     | **Manage configuration quickly to switch contexts between local, dev and staging**               |
@@ -21,6 +25,10 @@ plugins=(... kubectl)
 | kcsc    | `kubectl config set-context`        | Set a context entry in kubeconfig                                                                |
 | kcdc    | `kubectl config delete-context`     | Delete the specified context from the kubeconfig                                                 |
 | kccc    | `kubectl config current-context`    | Display the current-context                                                                      |
+<<<<<<< HEAD
+=======
+| kcgc    | `kubectl config get-contexts` | List of contexts available
+>>>>>>> 3848102a5ec8534cef935d594c6abcbfc0f419c8
 |         |                                     | **General aliases**                                                                              |
 | kdel    | `kubectl delete`                    | Delete resources by filenames, stdin, resources and names, or by resources and label selector    |
 | kdelf   | `kubectl delete -f`                 | Delete a pod using the type and name specified in -f argument                                    |
@@ -46,6 +54,10 @@ plugins=(... kubectl)
 | kdeli   | `kubectl delete ingress`            | Delete ingress resources matching passed argument                                                |
 |         |                                     | **Namespace management**                                                                         |
 | kgns    | `kubectl get namespaces`            | List the current namespaces in a cluster                                                         |
+<<<<<<< HEAD
+=======
+| kcn     | `kubectl config set-context ...`    | Change current namespace |
+>>>>>>> 3848102a5ec8534cef935d594c6abcbfc0f419c8
 | kens    | `kubectl edit namespace`            | Edit namespace resource from the default editor                                                  |
 | kdns    | `kubectl describe namespace`        | Describe namespace resource in detail                                                            |
 | kdelns  | `kubectl delete namespace`          | Delete the namespace. WARNING! This deletes everything in the namespace                          |
@@ -67,6 +79,10 @@ plugins=(... kubectl)
 | kdeld   | `kubectl delete deployment`         | Delete the deployment                                                                            |
 | ksd     | `kubectl scale deployment`          | Scale a deployment                                                                               |
 | krsd    | `kubectl rollout status deployment` | Check the rollout status of a deployment                                                         |
+<<<<<<< HEAD
+=======
+| kres    | `kubectl set env $@ REFRESHED_AT=...` | Recreate all pods in deployment with zero-downtime                                                         |
+>>>>>>> 3848102a5ec8534cef935d594c6abcbfc0f419c8
 |         |                                     | **Rollout management**                                                                           |
 | kgrs    | `kubectl get rs`                    | To see the ReplicaSet `rs` created by the deployment                                             |
 | krh     | `kubectl rollout history`           | Check the revisions of this deployment                                                           |
@@ -86,3 +102,21 @@ plugins=(... kubectl)
 | keno    | `kubectl edit node`                 | Edit nodes resource from the default editor                                                      |
 | kdno    | `kubectl describe node`             | Describe node resource in detail                                                                 |
 | kdelno  | `kubectl delete node`               | Delete the node                                                                                  |
+<<<<<<< HEAD
+=======
+|         |                                   | **Persistent Volume Claim management**                                                           |
+| kgpvc   | `kubectl get pvc`                   | List all PVCs                                                                                    |
+| kgpvcw  | `kgpvc --watch`                     | After listing/getting the requested object, watch for changes                                    |
+| kepvc   | `kubectl edit pvc`                  | Edit pvcs from the default editor                                                                |
+| kdpvc   | `kubectl describe pvc`              | Descirbe all pvcs                                                                                |
+| kdelpvc | `kubectl delete pvc`                | Delete all pvcs matching passed arguments                                                        |
+|         |                                     |                                                                                                  |
+| kgss    | `kubectl get statefulset`           | List the statefulsets in ps format                                                               |
+| kgssw   | `kgss --watch`                      | After getting the list of statefulsets, watch for changes                                        |
+| kgsswide| `kgss -o wide`                      | After getting the statefulsets, output in plain-text format with any additional information      |
+| kess    | `kubectl edit statefulset`          | Edit statefulset resource from the default editor                                                |
+| kdss    | `kubectl describe statefulset`      | Describe statefulset resource in detail                                                          |
+| kdelss  | `kubectl delete statefulset`        | Delete the statefulset                                                                           |
+| ksss    | `kubectl scale statefulset`         | Scale a statefulset                                                                              |
+| krsss   | `kubectl rollout status statefulset`| Check the rollout status of a deployment                                                         |
+>>>>>>> 3848102a5ec8534cef935d594c6abcbfc0f419c8
